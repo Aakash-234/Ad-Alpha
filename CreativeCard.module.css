@@ -1,0 +1,90 @@
+.creativeCard {
+  background-color: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all var(--animation-duration-normal) ease;
+  position: relative;
+}
+
+.creativeCard:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.creativeImageContainer {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.creativeImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.creativeImagePlaceholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  height: 100%;
+  background-color: var(--muted);
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+}
+
+.creativeOverlay {
+  position: absolute;
+  top: var(--spacing-2);
+  right: var(--spacing-2);
+}
+
+.matchScore {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  font-size: 0.75rem;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+}
+
+.creativeContent {
+  padding: var(--spacing-3);
+}
+
+.creativeMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-2);
+  font-size: 0.75rem;
+}
+
+.creativePlatform {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.creativeRegion {
+  color: var(--muted-foreground);
+}
+
+.creativeCopy {
+  font-size: 0.875rem;
+  font-style: italic;
+  color: var(--muted-foreground);
+  margin-bottom: var(--spacing-2);
+  line-height: 1.4;
+}
+
+.competitorIndicator {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  font-size: 0.75rem;
+  color: var(--secondary);
+  font-weight: 500;
+}

@@ -1,0 +1,86 @@
+.brandGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.brandCard {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: var(--spacing-3);
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  background-color: var(--card);
+  cursor: pointer;
+  transition: all var(--animation-duration-fast) ease;
+  width: 100%;
+  text-align: left;
+}
+
+.brandCard:hover {
+  background-color: var(--muted);
+  border-color: var(--muted);
+}
+
+.brandCard.selected {
+  border-color: var(--primary);
+  background-color: color-mix(in srgb, var(--primary) 10%, transparent);
+  box-shadow: var(--shadow-focus);
+  position: relative;
+}
+
+.brandCard.selected::after {
+  content: '✓';
+  position: absolute;
+  top: var(--spacing-2);
+  right: var(--spacing-2);
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.brandLogo, .brandLogoPlaceholder {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.brandLogoPlaceholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--muted);
+  color: var(--muted-foreground);
+}
+
+.brandName {
+  font-weight: 500;
+}
+
+.errorState, .emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--spacing-8);
+  color: var(--muted-foreground);
+  border-radius: var(--radius);
+  background-color: var(--muted);
+  min-height: 100px;
+}
+
+.errorState {
+  color: var(--error);
+  background-color: color-mix(in srgb, var(--error) 10%, transparent);
+}

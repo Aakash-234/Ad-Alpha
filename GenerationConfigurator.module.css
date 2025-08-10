@@ -1,0 +1,33 @@
+.configControls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.controlGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.controlLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--foreground);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.disabledReason {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  font-weight: 400;
+  font-style: italic;
+}
+
+.defaultIndicator {
+  font-size: 0.75rem;
+  color: var(--success);
+  font-weight: 400;
+}

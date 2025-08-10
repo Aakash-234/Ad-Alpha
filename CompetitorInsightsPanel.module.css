@@ -1,0 +1,158 @@
+.insightsPanel {
+  display: grid;
+  gap: var(--spacing-6);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.insightCard {
+  background-color: var(--card);
+  padding: var(--spacing-4);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--secondary);
+}
+
+.insightHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
+  padding-bottom: var(--spacing-2);
+  border-bottom: 1px solid var(--border);
+}
+
+.insightIcon {
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+
+.insightTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.insightDescription {
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: var(--spacing-3) 0 0 0;
+}
+
+.colorTrends {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-3);
+}
+
+.colorTrendItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.colorSwatch {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+}
+
+.colorValue {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  font-family: var(--font-family-monospace);
+}
+
+.copyToneBadge {
+  font-size: 0.875rem;
+  margin-bottom: var(--spacing-2);
+}
+
+.regionalInsight {
+  font-size: 0.875rem;
+  color: var(--foreground);
+  background-color: var(--muted);
+  padding: var(--spacing-3);
+  border-radius: var(--radius);
+  border-left: 3px solid var(--secondary);
+  margin: 0;
+}
+
+.optimizationList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+}
+
+.optimizationBadge {
+  font-size: 0.75rem;
+}
+
+.platformLabel {
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--secondary);
+}
+
+.sampleAds {
+  display: flex;
+  gap: var(--spacing-3);
+  overflow-x: auto;
+  padding: var(--spacing-2) 0;
+}
+
+.sampleAd {
+  flex-shrink: 0;
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.sampleAdImage {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.sampleAdMeta {
+  position: absolute;
+  bottom: var(--spacing-1);
+  right: var(--spacing-1);
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--spacing-8);
+  color: var(--muted-foreground);
+  border-radius: var(--radius);
+  background-color: var(--muted);
+  min-height: 200px;
+}
+
+.emptyIcon {
+  color: var(--muted-foreground);
+  opacity: 0.5;
+  margin-bottom: var(--spacing-4);
+}
+
+.emptyTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin-bottom: var(--spacing-2);
+}
+
+.emptyText {
+  max-width: 300px;
+}
+
+@media (max-width: 900px) {
+  .insightsPanel {
+    grid-template-columns: 1fr;
+  }
+}
